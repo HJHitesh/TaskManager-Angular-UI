@@ -1,0 +1,31 @@
+/* Container fills the viewport */
+.sidenav-container {
+  height: 100vh;
+}
+
+/* Sidebar styling */
+.sidenav {
+  width: 250px;
+}
+
+/* Content inside main area */
+.content {
+  padding: 16px;
+}
+
+/* Active link in sidenav */
+.active-link {
+  font-weight: bold;
+  color: #1976d2; /* Material primary color */
+}
+
+/* Toolbar text */
+mat-toolbar {
+  display: flex;
+  align-items: center;
+}
+
+/* Spacer for toolbar buttons */
+.spacer {
+  flex: 1 1 auto;
+}

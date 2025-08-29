@@ -1,0 +1,27 @@
+/* Center card and add spacing */
+mat-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Full-width form fields */
+.full-width {
+  width: 100%;
+}
+
+/* Toolbar inside card */
+mat-toolbar {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+/* Align button to right */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}

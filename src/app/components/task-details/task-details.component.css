@@ -1,0 +1,24 @@
+/* Toolbar spacing */
+mat-toolbar {
+  margin-bottom: 20px;
+}
+
+/* Filter container */
+.filter-container {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+/* Task cards container */
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Individual task card styling */
+.task-card {
+  width: 300px;
+  padding: 16px;
+}
