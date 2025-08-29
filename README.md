@@ -178,8 +178,8 @@ The Cloud-Native Task Manager follows a **full-stack, cloud-native architecture*
 
 ## Screenshots
 
-**1. Task List Page**  
-![Task List](https://user-images.githubusercontent.com/placeholder/task-list.png)
+**1. Create Task**  
+![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/CREATE.png)
 
 **2. Create Task Form**  
 ![Create Task](https://user-images.githubusercontent.com/placeholder/create-task.png)
