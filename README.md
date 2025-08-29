@@ -20,6 +20,12 @@ Access the live UI here:
 
 ---
 
+## API Testing with Swagger
+
+The backend Spring Boot API provides a Swagger UI for interactive testing of all endpoints.
+You can access it at:
+[Swagger Link](https://ec2-3-148-243-104.us-east-2.compute.amazonaws.com:8082/swagger-ui/index.html#/Task%20API/createTask)
+
 ## Installation and Running Locally
 
 1. Clone the repository:
