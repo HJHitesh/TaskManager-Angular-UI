@@ -181,17 +181,20 @@ The Cloud-Native Task Manager follows a **full-stack, cloud-native architecture*
 **1. Create Task**  
 ![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/CREATE.png)
 
-**1. Edit Task**  
+**2. Edit Task**  
 ![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/EDIT.png)
 
-**1. Create Task**  
-![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/CREATE.png)
+**3. FILTER Task**  
+![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/FILTER.png)
 
-**1. Create Task**  
-![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/CREATE.png)
+**4. LIST Task**  
+![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/LIST.png)
 
-**1. Create Task**  
-![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/CREATE.png)
+**5. UPDATE Task**  
+![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/UPDATE.png)
+
+**6. AFTER-UPDATE Task**  
+![Create](https://github.com/HJHitesh/TaskManager-Angular-UI/blob/master/images/AFTER-UPDATE.png)
 
 
 > Replace the above placeholder image URLs with actual screenshots from your app.
