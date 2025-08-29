@@ -79,6 +79,38 @@ cloud-native-task-manager/
    http://localhost:4200
    ```
 
+**Angular Project Directory Structure:**
+
+```
+angular-task-ui/
+├── app
+│   ├── app.component.css
+│   ├── app.component.html
+│   ├── app.component.spec.ts
+│   ├── app.component.ts
+│   ├── app.config.server.ts
+│   ├── app.config.ts
+│   ├── app.routes.server.ts
+│   ├── app.routes.ts
+│   ├── components/
+│   ├── models/
+│   ├── prerender.ts
+│   └── services/
+├── index.html
+├── main.server.ts
+├── main.ts
+├── server.ts
+└── styles.scss
+```
+
+**Explanation:**  
+- `app/` contains the main application code, including components, models, services, and routing configurations.  
+- `components/` holds reusable UI components.  
+- `models/` defines data structures for tasks and other entities.  
+- `services/` contains Angular services to interact with the backend API.  
+- `main.ts` and `main.server.ts` are entry points for client-side and server-side rendering.  
+- `styles.scss` contains global styles, and `index.html` is the main HTML template.  
+
 **Features:**  
 - Form to create/update tasks using Angular Reactive Forms  
 - Table to list tasks with pagination and status filter  
