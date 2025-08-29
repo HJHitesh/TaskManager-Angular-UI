@@ -1,85 +1,55 @@
-
-# Cloud-Native Task Manager – Technical Test
-
-## Repositories
-
-- **Backend API (Spring Boot)**: [HJHitesh/TaskManager-Backend-API](https://github.com/HJHitesh/TaskManager-Backend-API)  
-  Swagger Documentation: [Swagger UI](https://ec2-3-148-243-104.us-east-2.amazonaws.com:8082/swagger-ui/index.html#/Task%20API/createTask)
-
-- **Frontend UI (Angular)**: [HJHitesh/TaskManager-Angular-UI](https://github.com/HJHitesh/TaskManager-Angular-UI)  
-  Live UI: [Angular App](http://my-angular-app-4056.s3-website.us-east-2.amazonaws.com/tasks)
-
----
+# Cloud-Native Task Manager – Angular Frontend
 
 ## Project Overview
 
-**Duration:** 1.5 Hours  
-**Skill Areas:**  
-- Java Spring Boot – REST API development, validation, pagination, testing  
+This project is the **Angular frontend** for the Cloud-Native Task Manager.  
+It provides a responsive UI to interact with the Spring Boot backend API and demonstrates task management functionality including creation, listing, updating, and deletion of tasks.
+
+**Skills Demonstrated:**  
 - Angular – Reactive forms, UI components, API integration  
-- AWS Fundamentals – Lambda functions, SDK usage, event-driven architecture  
-- Cloud Deployment – End-to-end deployment and live demo  
-
-This project demonstrates a cloud-native task management system with backend APIs, frontend UI, and AWS Lambda integration.
+- Angular Material (optional)  
+- Interaction with REST APIs  
+- Form validation and user feedback  
 
 ---
 
-## Project Structure
+## Live Demo
+
+Access the live UI here:  
+[Angular App](http://my-angular-app-4056.s3-website.us-east-2.amazonaws.com/tasks)
+
+---
+
+## Installation and Running Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/HJHitesh/TaskManager-Angular-UI.git
+cd TaskManager-Angular-UI
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+ng serve
+```
+
+4. Access the UI at:
 
 ```
-cloud-native-task-manager/
-├── springboot-task-api/         # Java backend
-├── angular-task-ui/             # Angular frontend
-├── aws-lambda-task-handler/     # Python Lambda function
-├── README.md                    # This file
+http://localhost:4200
 ```
 
 ---
 
-## 1. Spring Boot API
-
-**Objective:** Build a REST API for managing tasks.
-
-**Steps to Run:**  
-1. Navigate to `springboot-task-api/`  
-2. Build and run using Maven or Gradle  
-3. Access Swagger UI at:  
-   ```
-   http://localhost:8080/swagger-ui.html
-   ```
-
-**API Endpoints:**  
-- `POST /tasks` – Create a new task  
-- `GET /tasks` – List all tasks  
-- `GET /tasks/{id}` – Get task by ID  
-- `PUT /tasks/{id}` – Update task by ID  
-- `DELETE /tasks/{id}` – Delete task by ID  
-
-**Features:**  
-- Validation (e.g., title required, due date must be in future)  
-- Pagination and filtering by status  
-- Swagger/OpenAPI documentation  
-- Unit tests for service layer  
-
----
-
-## 2. Angular UI
-
-**Objective:** Build a responsive UI to interact with the Spring Boot API.
-
-**Steps to Run:**  
-1. Navigate to `angular-task-ui/`  
-2. Run:  
-   ```bash
-   npm install
-   ng serve
-   ```  
-3. Access the UI at:  
-   ```
-   http://localhost:4200
-   ```
-
-**Angular Project Directory Structure:**
+## Angular Project Directory Structure
 
 ```
 angular-task-ui/
@@ -103,65 +73,142 @@ angular-task-ui/
 └── styles.scss
 ```
 
-**Explanation:**  
-- `app/` contains the main application code, including components, models, services, and routing configurations.  
-- `components/` holds reusable UI components.  
-- `models/` defines data structures for tasks and other entities.  
-- `services/` contains Angular services to interact with the backend API.  
-- `main.ts` and `main.server.ts` are entry points for client-side and server-side rendering.  
-- `styles.scss` contains global styles, and `index.html` is the main HTML template.  
+**Explanation:**
 
-**Features:**  
-- Form to create/update tasks using Angular Reactive Forms  
-- Table to list tasks with pagination and status filter  
-- Buttons to edit/delete tasks  
-- Display validation errors and success messages  
-- Optional: Angular Material UI components  
+- `app/` – Main application folder containing components, services, models, and routing.  
+- `components/` – Reusable UI components (task forms, tables, etc.).  
+- `models/` – Data models for tasks.  
+- `services/` – Angular services for API integration.  
+- `main.ts` – Client-side entry point.  
+- `main.server.ts` – Server-side entry point (if using Angular Universal).  
+- `styles.scss` – Global styles.  
+- `index.html` – Main HTML template.  
 
 ---
 
-## 3. AWS Lambda Function
+## Features
 
-**Objective:** Simulate an event-driven workflow using AWS Lambda and SDK.
-
-**Steps to Run:**  
-1. Navigate to `aws-lambda-task-handler/`  
-2. Implement a Python Lambda function that:  
-   - Receives a simulated task completion event  
-   - Logs the task details  
-   - Stores a summary in a mock S3 bucket using AWS SDK (`boto3`)  
-
-**Notes:**  
-- Include comments explaining how this would work in a real AWS setup  
-- Demonstrates event-driven architecture simulation  
+- Task creation and update using Reactive Forms  
+- Display of tasks in a paginated table with filtering by status  
+- Edit and delete functionality for tasks  
+- Validation errors and success messages  
+- Optional integration with Angular Material for UI components  
 
 ---
 
-## Cloud Deployment
+## API Integration
 
-**Objective:** Deploy all services to AWS and demonstrate functionality.
+The frontend communicates with the Spring Boot backend API. Endpoints used:
 
-**Steps:**  
-- Deploy Angular frontend to AWS S3 and serve via CloudFront  
-- Deploy Spring Boot backend to AWS EC2 or Elastic Beanstalk  
-- Deploy Lambda function using AWS Console or SAM CLI  
-- Ensure proper CORS configuration between frontend and backend  
+- **POST** `/tasks` – Create task  
+- **GET** `/tasks` – List all tasks  
+- **GET** `/tasks/{id}` – Get task details  
+- **PUT** `/tasks/{id}` – Update task  
+- **DELETE** `/tasks/{id}` – Delete task  
 
----
-
-## Live Demo
-
-- Demonstrate task creation, listing, and Lambda event simulation  
-- Discuss architecture and deployment choices  
+> Make sure the backend API is running and CORS is properly configured.
 
 ---
 
-## Source Code Submission
+## Architecture
 
-- GitHub repository containing source code for all components  
-- Deployment instructions  
-- Optional architecture diagram  
+The Cloud-Native Task Manager follows a **full-stack, cloud-native architecture**:
+
+```
+             ┌───────────────────┐
+             │  User / Browser   │
+             └─────────┬─────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │   AWS S3 / CloudFront  │
+             │  (Angular Frontend)    │
+             └─────────┬─────────┘
+                       │ HTTP/HTTPS
+                       ▼
+             ┌───────────────────┐
+             │   EC2 Instance    │
+             │ (Spring Boot Backend │
+             │    in Docker)       │
+             └─────────┬─────────┘
+                       │ JDBC / REST
+                       ▼
+             ┌───────────────────┐
+             │    MySQL Database │
+             │  (RDS or EC2-based) │
+             └───────────────────┘
+```
+
+### Components:
+
+1. **Angular Frontend**  
+   - Hosted on **AWS S3** with optional **CloudFront CDN** for fast delivery.  
+   - Communicates with backend REST APIs over HTTP/HTTPS.  
+
+2. **Spring Boot Backend**  
+   - Runs on **EC2** instance inside **Docker container**.  
+   - Handles business logic and exposes REST endpoints.  
+
+3. **MySQL Database**  
+   - Can be hosted on **AWS RDS** or on the same EC2 instance.  
+   - Stores all task data.  
+
+4. **Docker**  
+   - Encapsulates backend application for easy deployment and scaling.  
+
+5. **AWS Services**  
+   - **S3 + CloudFront:** Serves static frontend.  
+   - **EC2:** Hosts backend Docker container.  
+   - **RDS (optional):** Managed MySQL database.  
+
+### Flow:
+
+1. User accesses the **Angular frontend** from S3 via browser.  
+2. Frontend sends HTTP requests to **Spring Boot backend** on EC2.  
+3. Backend queries or updates **MySQL database**.  
+4. Backend returns JSON responses to frontend for rendering.  
 
 ---
 
-**Note:** This README provides links to the deployed frontend and Swagger UI for quick testing and validation.
+## Screenshots
+
+**1. Task List Page**  
+![Task List](https://user-images.githubusercontent.com/placeholder/task-list.png)
+
+**2. Create Task Form**  
+![Create Task](https://user-images.githubusercontent.com/placeholder/create-task.png)
+
+**3. Edit Task Form**  
+![Edit Task](https://user-images.githubusercontent.com/placeholder/edit-task.png)
+
+**4. Success Notification**  
+![Success](https://user-images.githubusercontent.com/placeholder/success-notification.png)
+
+> Replace the above placeholder image URLs with actual screenshots from your app.
+
+---
+
+## Deployment
+
+The frontend can be deployed to **AWS S3** and served via **CloudFront** for static hosting:
+
+1. Build the project for production:
+
+```bash
+ng build --prod
+```
+
+2. Upload the contents of `dist/angular-task-ui` to your S3 bucket.  
+3. Configure S3 bucket for static website hosting and optionally use CloudFront for CDN.  
+
+---
+
+## Notes
+
+- Ensure that the backend API URL is correctly configured in `app.config.ts`.  
+- Use Angular CLI commands for building and serving the app:
+
+```bash
+ng build    # Build for production
+ng serve    # Run locally
+```
